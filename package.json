@@ -1,0 +1,30 @@
+{
+  "name": "custom-grid-jm",
+  "version": "1.0.2",
+  "description": "customizable grid",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "tsc && echo 'Finished building NPM package'"
+	},
+  "author": "me",
+  "license": "ISC",
+  "types": "index.d.ts",
+  "peerDependencies": {
+    "react": "^17.0.0-0"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.4",
+    "@types/react": "^17.0.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "@types/styled-components": "^5.1.10",
+    "react-bootstrap": "^1.6.1"
+  },
+  "repository": {
+    "type": "npm/npm",
+    "url": "https://github.com/cipriRusu/custom-grid-jm"
+  }
+}
