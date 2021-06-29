@@ -31,6 +31,8 @@ const GridRowStyled = styled_components_1.default.div `
     .map((x) => {
     return `${x.size + " "}`;
 })};
+
+    height: 10vh;
   }
 
   @media (min-width: ${ScreenThresholds_1.default.MediumScreen +
@@ -47,6 +49,8 @@ const GridRowStyled = styled_components_1.default.div `
     .${ColumnVisibility_1.MinimumVisibility.MaxVisible} {
       display: none;
     }
+
+    height: 10vh;
   }
 
   @media (min-width: ${ScreenThresholds_1.default.SmallScreen +

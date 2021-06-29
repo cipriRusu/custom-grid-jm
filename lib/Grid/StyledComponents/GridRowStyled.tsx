@@ -33,6 +33,8 @@ const GridRowStyled = styled.div<{
         .map((x) => {
           return `${x.size + " "}`;
         })};
+
+    height: 10vh;
   }
 
   @media (min-width: ${ScreenThresholds.MediumScreen +
@@ -52,6 +54,8 @@ const GridRowStyled = styled.div<{
     .${MinimumVisibility.MaxVisible} {
       display: none;
     }
+
+    height: 10vh;
   }
 
   @media (min-width: ${ScreenThresholds.SmallScreen +
