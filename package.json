@@ -1,11 +1,11 @@
 {
   "name": "custom-grid-jm",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "customizable grid",
   "main": "index.js",
   "scripts": {
     "prepare": "tsc && echo 'Finished building NPM package'"
-	},
+  },
   "author": "me",
   "license": "ISC",
   "types": "index.d.ts",

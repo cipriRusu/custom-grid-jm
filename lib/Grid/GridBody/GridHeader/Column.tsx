@@ -69,34 +69,16 @@ class Column extends React.Component<IColumn, IColumn> {
   }
 
   handleFilterIcon(value: any) {
-    switch (this.state.type) {
+    switch (this.props.type) {
       case undefined:
+      case "text":
       case "number":
       case "boolean":
       case "date":
-        if (
-          value.filters.some((x: IFilter) => {
-            return x.name === this.state.name;
-          })
-        ) {
-          return (
-            <i
-              className="filter-icon-column-visible fa fa-filter"
-              aria-hidden="true"
-            ></i>
-          );
-        } else {
-          return (
-            <i
-              className="filter-icon-column fa fa-filter"
-              aria-hidden="true"
-            ></i>
-          );
-        }
       case "select":
         if (
           value.filters.some((x: IFilter) => {
-            return x.name === this.state.name;
+            return x.name === this.props.name;
           })
         ) {
           return (
@@ -186,10 +168,9 @@ class Column extends React.Component<IColumn, IColumn> {
                 <div
                   className={
                     "filter-dropdown" +
-                    `${
-                      this.state === value.toggledColumn
-                        ? `${this.getSide()} show`
-                        : ""
+                    `${this.state === value.toggledColumn
+                      ? `${this.getSide()} show`
+                      : ""
                     }`
                   }
                 >

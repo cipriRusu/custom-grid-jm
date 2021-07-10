@@ -50,20 +50,13 @@ const Filters = (props: any) => {
   const handleFilterIcon = (header: IColumn) => {
     switch (header.type) {
       case undefined:
+      case "text":
       case "boolean":
       case "number":
       case "date":
-        return gridContext.filters.map((x: IFilter, index: number) => {
-          return header.name === x.name ? (
-            <i key={index} className="icon-column fa fa-filter"></i>
-          ) : null;
-        });
-
       case "select":
         return gridContext.filters.map((x: IFilter, index: number) => {
-          return header.name === x.name &&
-            x.values !== undefined &&
-            x.values.length > 0 ? (
+          return header.name === x.name ? (
             <i key={index} className="icon-column fa fa-filter"></i>
           ) : null;
         });

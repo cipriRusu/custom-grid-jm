@@ -67,22 +67,15 @@ class Column extends react_1.default.Component {
         value.setSort(value.sort);
     }
     handleFilterIcon(value) {
-        switch (this.state.type) {
+        switch (this.props.type) {
             case undefined:
+            case "text":
             case "number":
             case "boolean":
             case "date":
-                if (value.filters.some((x) => {
-                    return x.name === this.state.name;
-                })) {
-                    return (react_1.default.createElement("i", { className: "filter-icon-column-visible fa fa-filter", "aria-hidden": "true" }));
-                }
-                else {
-                    return (react_1.default.createElement("i", { className: "filter-icon-column fa fa-filter", "aria-hidden": "true" }));
-                }
             case "select":
                 if (value.filters.some((x) => {
-                    return x.name === this.state.name;
+                    return x.name === this.props.name;
                 })) {
                     return (react_1.default.createElement("i", { className: "filter-icon-column-visible fa fa-filter", "aria-hidden": "true" }));
                 }

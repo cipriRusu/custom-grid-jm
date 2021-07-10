@@ -58,17 +58,13 @@ const Filters = (props) => {
     const handleFilterIcon = (header) => {
         switch (header.type) {
             case undefined:
+            case "text":
             case "boolean":
             case "number":
             case "date":
-                return gridContext.filters.map((x, index) => {
-                    return header.name === x.name ? (react_1.default.createElement("i", { key: index, className: "icon-column fa fa-filter" })) : null;
-                });
             case "select":
                 return gridContext.filters.map((x, index) => {
-                    return header.name === x.name &&
-                        x.values !== undefined &&
-                        x.values.length > 0 ? (react_1.default.createElement("i", { key: index, className: "icon-column fa fa-filter" })) : null;
+                    return header.name === x.name ? (react_1.default.createElement("i", { key: index, className: "icon-column fa fa-filter" })) : null;
                 });
         }
     };
