@@ -23,5 +23,3 @@ export {
     ColumnTypes,
     IDataSource
 }
-
-export * from "./Grid/Grid";

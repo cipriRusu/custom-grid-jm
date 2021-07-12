@@ -1,6 +1,6 @@
 {
   "name": "custom-grid-jm",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "customizable grid",
   "main": "index.js",
   "scripts": {
