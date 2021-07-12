@@ -8,7 +8,8 @@ import { ColumnSizes } from "./Grid/CustomTypes/ColumnSizes";
 import { ColumnCollapsable } from "./Grid/CustomTypes/ColumnCollapsable";
 import { ColumnTypes } from "./Grid/CustomTypes/ColumnTypes";
 import { IColumn } from "./Grid/Interfaces/GridBody/IColumn";
-import { IDataSource } from "custom-grid-jm/Grid/Interfaces/GridData/IDataSource";
+import { IDataSource } from "./Grid/Interfaces/GridData/IDataSource";
+import { ISortStats } from "./Grid/Interfaces/GridBody/ISortStats";
 
 export { 
     Grid, 
@@ -21,5 +22,6 @@ export {
     ColumnSizes, 
     ColumnCollapsable, 
     ColumnTypes,
-    IDataSource
+    IDataSource,
+    ISortStats
 }
