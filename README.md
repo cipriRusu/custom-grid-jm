@@ -28,7 +28,7 @@ type (data type of the field), values[] (one or more values which the filter hol
 
 ### Notes ###
 This Grid DataObject implementation does not support async/await calls inside the Get/GetTotal methods, only supports fetching synchronously. The repository
-https://github.com/cipriRusu/jm-grid-implementation branch: grid-backend-support contains a modified version of the Grid which does support such operations.
+https://github.com/cipriRusu/jm-grid-implementation/tree/grid-backend-support contains a modified version of the Grid which does support such operations.
 This implementation was kept sync on purpose to be used in the demo application.
 
 ### Header ###
