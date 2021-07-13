@@ -20,11 +20,11 @@ Local implementation for the IDataSource interface (usually to fetch data from a
 Get will be called each time there is a state set/change, with the new parameters : sort (ISortStats type), filter (IFilter[]), pageSize (number), page(number).
 GetTotal will be called to get the total number of items which satisfy the current state
 
-**ISortStats** contains the currently applied sort, which implements the following members: sort_type (asc/desc), field_id, field_type.
-Use the received parameters in your API/Repository to get the sorted data.
+**sort** which implements **ISortStats** gets called with the currently applied sort, which implements the following members: sort_type (asc/desc), field_id, field_type.
+Use the received values in your API/Repository to get the sorted data.
 
-**IFilter[]** contains a collection of currently applied filters. A single IFilter item implements the following members: name(field on which filtering is applied),
-type (data type of the field), values[] (one or more values which the filter holds), operator(id of the applied operator from Grid).
+**filters** which implements **IFilter[]** contains a collection of currently applied filters. 
+A single IFilter item implements the following members: name(field on which filtering is applied), type(data type of the field), values[] (one or more values which the filter holds), operator(id of the applied operator from Grid).
 
 ### Notes ###
 This Grid DataObject implementation does not support async/await calls inside the Get/GetTotal methods, only supports fetching synchronously. The repository
@@ -68,7 +68,7 @@ headerGroupingToDisplay.name = "GroupingNameRendered"
 headerGroupingToDisplay.columns = [columnToDisplay];
 
 let headerToDisplay = {} as IHeader;
-headerToDisplay.name = "nameOfHeader" // will not be displayed on screen, used for filtering purposes (in case we need to render multiple headers)
+headerToDisplay.name = "firstHeader" // will not be displayed on screen, used for filtering purposes (in case we need to render multiple headers)
 headerToDisplay.headers = [headerGroupingToDisplay]
 
 export default [headerToDisplay];
