@@ -71,5 +71,5 @@ let headerToDisplay = {} as IHeader;
 headerToDisplay.name = "nameOfHeader" // will not be displayed on screen, used for filtering purposes (in case we need to render multiple headers)
 headerToDisplay.headers = [headerGroupingToDisplay]
 
-export const HeaderToExportAndAssignToGrid;
+export default [headerToDisplay];
 ```
