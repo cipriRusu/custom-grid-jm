@@ -61,7 +61,7 @@ let columnToDisplay = {} as IColumn;
 columnToDisplay.name = "ColumnNameRendered";
 columnToDisplay.size = ColumnSizes.StandardColumn;
 columnToDisplay.collapsable = ColumnCollapsable.collapsable;
-column.minVisibility = MinimumVisibility.MaxVisible;
+columnToDisplay.minVisibility = MinimumVisibility.MaxVisible;
 
 let headerGroupingToDisplay = {} as IGrouping;
 headerGroupingToDisplay.name = "GroupingNameRendered"
